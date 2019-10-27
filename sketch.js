@@ -25,7 +25,7 @@ function setup() {
 }
 
 function mouseDragged() {
-  var c = new Circle(mouseX, mouseY, 20, '#FFF');
+  var c = new Circle(mouseX, mouseY, 10, '#FFF');
   circles.push(c);
 }
 
@@ -38,4 +38,5 @@ function draw() {
   for (var i = 0; i < boundaries.length; i++) {
     boundaries[i].show();
   }
+  filter(THRESHOLD, 0.1);
 }

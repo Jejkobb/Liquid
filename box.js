@@ -15,9 +15,7 @@ function Circle(x, y, r, color) {
     //fill(255, 255, 255, 50);
     //ellipse(0, 0, this.r * 5);
     noStroke();
-    var p = r*10;
-    var d = (p-60)/2;
-    image(img, -r/2,-r/2, p, p);
+    image(img, -50, -50, 100, 100);
     pop();
   }
 }
