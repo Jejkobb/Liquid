@@ -1,7 +1,7 @@
 function Circle(x, y, r, color) {
   var options = {
     friction: 0,
-    restitution: 0.5
+    restitution: 0
   }
   this.body = Bodies.circle(x, y, r, options);
   this.r = r;
@@ -9,16 +9,15 @@ function Circle(x, y, r, color) {
 
   this.show = function() {
     var pos = this.body.position;
-    var angle = this.body.angle;
     push();
     translate(pos.x, pos.y);
-    rotate(angle);
     rectMode(CENTER);
-    strokeWeight(0);
-    stroke(255);
-    fill(color);
-    ellipse(0, 0, this.r * 2);
+    //fill(255, 255, 255, 50);
+    //ellipse(0, 0, this.r * 5);
+    noStroke();
+    var p = r*10;
+    var d = (p-60)/2;
+    image(img, -r/2,-r/2, p, p);
     pop();
   }
-
 }
